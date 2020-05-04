@@ -20,5 +20,6 @@ php artisan update:products
 'product_csv_files' => 'csv'
 
 ## Не успел 
-Детали товара
-Тесты 
+Details producs
+Seed for user
+Tests
