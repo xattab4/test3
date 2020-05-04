@@ -123,6 +123,11 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    /**
+     * Where are csv files to update products
+     */
+    'product_csv_files' => 'csv',
+
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

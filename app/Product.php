@@ -21,6 +21,13 @@ class Product extends Model
     protected $primaryKey = 'id';
 
     /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = ['sku', 'title', 'image', 'category', 'price'];
+
+    /**
      * The attributes that should be visible in arrays.
      *
      * @var array

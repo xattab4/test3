@@ -21,7 +21,7 @@ class ProductController extends Controller
 
     public function getPriceAttribute($value)
     {
-        return number_format($value, 2, ',', ' ');;
+        return number_format($value, 2, ',', ' ');
     }
 
 }

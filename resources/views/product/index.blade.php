@@ -4,12 +4,12 @@
     <div class="container">
         <div class="row">
             @forelse ($products as $product)
-                <div class="col-4">
-                    <div class="card" style="width: 18rem;">
-                        <img src="" class="card-img-top" alt="{{$product->title}}" />
+                <div class="col-4 card-group">
+                    <div class="card mb-4" style="width: 18rem;">
+                    <img src="{{ Storage::url($product->image) }}" class="card-img-top" alt="{{$product->title}}" />
                         <div class="card-body">
                             <h5 class="card-title">{{$product->title}}</h5>
-                            <p class="card-text">{{$product->price}}</p>
+                            <p class="card-text">{{$product->price}} $</p>
                             <a href="#" class="btn btn-primary">Details</a>
                         </div>
                       </div>
