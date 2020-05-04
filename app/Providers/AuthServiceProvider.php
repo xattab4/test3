@@ -6,8 +6,13 @@ use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvid
 use Illuminate\Support\Facades\Gate;
 use Laravel\Passport\Passport; 
 
+use Validator;
+
 class AuthServiceProvider extends ServiceProvider
 {
+
+    private $allowedDomains = ['mail.ru'];
+
     /**
      * The policy mappings for the application.
      *
@@ -24,6 +29,10 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        Validator::extend('allowed_domain', function($attribute, $value, $parameters, $validator) {
+            return !in_array(explode('@', $value)[1], $this->allowedDomains);
+        }, 'Domain not valid for registration or logon now.');
+
         $this->registerPolicies();
         Passport::routes();
     }
