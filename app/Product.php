@@ -25,12 +25,32 @@ class Product extends Model
      *
      * @var array
      */
-    protected $fillable = ['sku', 'title', 'image', 'category', 'price'];
+    protected $fillable = ['category_id', 'sku', 'title', 'image', 'category', 'price'];
 
     /**
      * The attributes that should be visible in arrays.
      *
      * @var array
      */
-    protected $visible = ['sku', 'title', 'image', 'category', 'price'];
+    protected $visible = ['id', 'sku', 'title', 'image', 'category', 'price'];
+
+    /**
+     * Get the category of this product
+     * 
+     * @return array
+     */
+    public function category()
+    {
+        return $this->belongsTo('App\Category', 'category_id');
+    }
+
+    /**
+     * Let's format the price into a decent form
+     * 
+     * @return string
+     */
+    public function getPriceAttribute($value)
+    {
+        return number_format($value, 2, ',', ' ');
+    }
 }

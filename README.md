@@ -1,25 +1,10 @@
-## Api Routes
-/api/login
-/api/register
+Простое API с авторизацией\регистрацией с помощью laravel/passport
 
-/api/user
-/api/logout
+Регистрацию для разных типов аккаунтов прорабатывать не стал. Не думаю, что это важно в данном случае. 
 
-/api/products
+Небыло времени сделать Unit тесты. 
+Автоматическую документацию сделал через Postman.
 
-## Web Routes
-/login
-/register
+https://documenter.getpostman.com/view/10212515/TVKEWx4t
 
-/products
-
-## Comand for update product
-php artisan update:products
-
-## Config path in confing/app.php
-'product_csv_files' => 'csv'
-
-## Не успел 
-Details producs
-Seed for user
-Tests
+В целом не чем не отличается от https://swagger.io/  
