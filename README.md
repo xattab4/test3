@@ -7,4 +7,4 @@
 
 https://documenter.getpostman.com/view/10212515/TVKEWx4t
 
-В целом не чем не отличается от https://swagger.io/  
+В целом не чем не отличается от https://swagger.io/   
