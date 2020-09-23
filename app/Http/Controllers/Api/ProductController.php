@@ -15,4 +15,11 @@ class ProductController extends Controller
         return ProductResource::collection(Product::orderBy('price', 'ASC')->get());
     }
 
+    public function show($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return  new ProductResource($product);
+    }
+
 }
